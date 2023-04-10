@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">kauppalista</string>
+
+    <string-array name="order_by_array">
+        <item>Aakkosjärjestys</item>
+        <item>Aikajärjestys</item>
+
+    </string-array>
+</resources>
