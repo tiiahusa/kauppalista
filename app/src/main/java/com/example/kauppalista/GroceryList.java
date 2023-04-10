@@ -28,6 +28,7 @@ public class GroceryList {
     }
 
     public void deleteGroceryFromList (String id) {
+        System.out.println("Poistetaan");
         int i = 0;
         for (Grocery gro: groceries) {
             if(gro.getId().equals(id)) {
@@ -65,6 +66,10 @@ public class GroceryList {
         }
         return returnList;
 
+    }
+
+    public Grocery getGroceryById (int id) {
+        return groceries.get(id);
     }
 
 }

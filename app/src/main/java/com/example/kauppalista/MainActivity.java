@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+
+
 public class MainActivity extends AppCompatActivity {
 
     private GroceryList list;
@@ -25,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
         list = GroceryList.getInstance(); // Create list or get created one
         recyclerView.setAdapter(new GroceryListAdapter(getApplicationContext(), list.getGroceries()));
 
-        PrintList();
 
     }
 
@@ -42,15 +43,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AddGrocery.class);
         startActivity(intent);
 
-    }
-
-    public void PrintList() {
-        System.out.println("Lista aakkosjärjestyksessä: ");
-        list.getListByName().forEach(item -> System.out.print(item.getGrocery() + " Muista: " + item.getRem() + " Kirjattu: " + item.getTimeToString()));
-        System.out.println("");
-        System.out.println("Lista aikajärjestyksessä: ");
-        list.getListByTime().forEach(item -> System.out.print(item.getGrocery() + " Muista: " + item.getRem() + " Kirjattu: " + item.getTimeToString()));
-        System.out.println("\n");
     }
 
 }
