@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
-import java.lang.reflect.Array;
 
 public class GroceryListAdapter extends RecyclerView.Adapter<GroceryViewHolder> {
 
@@ -29,7 +28,7 @@ public class GroceryListAdapter extends RecyclerView.Adapter<GroceryViewHolder> 
     public void onBindViewHolder(@NonNull GroceryViewHolder holder, int position) {
 
         holder.txtProduct.setText(list.get(position).getGrocery());
-        holder.txtRemember.setText("Muista: " + list.get(position).getRem());
+        holder.txtRemember.setText("Muista: " + list.get(position).getId());
         holder.remove.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -40,6 +39,7 @@ public class GroceryListAdapter extends RecyclerView.Adapter<GroceryViewHolder> 
         });
 
         holder.edit.setOnClickListener(view -> {
+
 
         });
 

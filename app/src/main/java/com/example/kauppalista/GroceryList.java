@@ -11,7 +11,7 @@ public class GroceryList {
     private SortedMap<String, Grocery> listByName = new TreeMap<>(); //GroceryList order by grocery name
     private SortedMap<LocalDateTime, Grocery> listByTime = new TreeMap<>(); // Grocerylist order by adding time
     private ArrayList<Grocery> returnList = new ArrayList<>();
-    private ArrayList<Grocery> groceries;
+    private ArrayList<Grocery> groceries = new ArrayList<>();
     private GroceryList() { // builder must be private for singleton grocery list
 
     }

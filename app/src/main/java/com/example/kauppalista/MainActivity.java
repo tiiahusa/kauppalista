@@ -22,19 +22,19 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.rvGroceryList); // linked code to recyclerviewer
         recyclerView.setLayoutManager(new LinearLayoutManager(this)); // set it linearlayoutmanager
 
-
         list = GroceryList.getInstance(); // Create list or get created one
         recyclerView.setAdapter(new GroceryListAdapter(getApplicationContext(), list.getGroceries()));
 
+        PrintList();
 
     }
 
     public void OrderByTime (View view) {
-        recyclerView.setAdapter(new GroceryListAdapter(getApplicationContext(), list.getListByName()));
+        recyclerView.setAdapter(new GroceryListAdapter(getApplicationContext(), list.getListByTime()));
     }
 
     public void OrderByName (View view) {
-        recyclerView.setAdapter(new GroceryListAdapter(getApplicationContext(), list.getListByTime()));
+        recyclerView.setAdapter(new GroceryListAdapter(getApplicationContext(), list.getListByName()));
     }
 
     public void AddGrocery(View view) {

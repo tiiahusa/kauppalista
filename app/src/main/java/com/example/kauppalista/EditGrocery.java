@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-public class AddGrocery extends AppCompatActivity {
+public class EditGrocery extends AppCompatActivity {
 
     private EditText tbGrocery, tbRem;
     private GroceryList list;

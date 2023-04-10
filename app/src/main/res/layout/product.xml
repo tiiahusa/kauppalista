@@ -48,13 +48,13 @@
 
             <ImageView
                 android:id="@+id/imgRemove"
-                android:layout_width="match_parent"
+                android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/delete" />
 
             <ImageView
                 android:id="@+id/imgEdit"
-                android:layout_width="match_parent"
+                android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/edit" />
         </LinearLayout>
