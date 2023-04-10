@@ -27,8 +27,15 @@ public class GroceryList {
         groceries.add(grocery);
     }
 
-    public void deleteGroceryFromList (Grocery grocery) {
-        groceries.remove(grocery);
+    public void deleteGroceryFromList (String id) {
+        int i = 0;
+        for (Grocery gro: groceries) {
+            if(gro.getId().equals(id)) {
+                break;
+            }
+            i++;
+        }
+        groceries.remove(i);
     }
 
     public ArrayList<Grocery> getGroceries() {

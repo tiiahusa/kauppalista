@@ -9,6 +9,7 @@ public class Grocery {
     private String grocery;
     private String rem;
     private LocalDateTime time;
+    private String id;
 
     public Grocery(String grocery, String rem) {
         this.grocery = grocery;
@@ -16,6 +17,7 @@ public class Grocery {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) { // If version is ok, take time
             this.time = LocalDateTime.now();
         }
+        id = "NCC-" + (int)(Math.random() * 90000 + 1000);
     }
 
     public String getGrocery() {
@@ -39,6 +41,10 @@ public class Grocery {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) { // If version is ok, take time
             this.time = LocalDateTime.now();
         }
+    }
+
+    public String getId() {
+        return id;
     }
 
     public void setRem(String rem) {
