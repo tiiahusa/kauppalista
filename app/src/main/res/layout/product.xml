@@ -18,7 +18,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="300dp"
+            android:layout_width="200dp"
             android:layout_height="120dp"
             android:orientation="vertical">
 
@@ -50,14 +50,12 @@
                 android:id="@+id/ibDelete"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:background="#00FFFFFF"
                 app:srcCompat="@android:drawable/ic_delete" />
 
             <ImageButton
                 android:id="@+id/ibEdit"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:background="#00FFFFFF"
                 app:srcCompat="@android:drawable/ic_menu_edit" />
         </LinearLayout>
     </LinearLayout>

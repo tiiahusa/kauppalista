@@ -11,6 +11,7 @@ public class GroceryList {
     private SortedMap<String, Grocery> listByName = new TreeMap<>(); //GroceryList order by grocery name
     private SortedMap<LocalDateTime, Grocery> listByTime = new TreeMap<>(); // Grocerylist order by adding time
     private ArrayList<Grocery> returnList = new ArrayList<>();
+    private ArrayList<Grocery> groceries;
     private GroceryList() { // builder must be private for singleton grocery list
 
     }
@@ -23,12 +24,23 @@ public class GroceryList {
     }
 
     public void addGroceryToList (Grocery grocery) {
-        listByName.put(grocery.getGrocery(), grocery);
-        listByTime.put(grocery.getTime(), grocery);
+        groceries.add(grocery);
+    }
+
+    public void deleteGroceryFromList (Grocery grocery) {
+        groceries.remove(grocery);
+    }
+
+    public ArrayList<Grocery> getGroceries() {
+        return groceries;
     }
 
     public ArrayList<Grocery> getListByName() {
         returnList.clear();
+        listByName.clear();
+        for (Grocery gro: groceries) {
+            listByName.put(gro.getGrocery(), gro);
+        }
         for(String key : listByName.keySet() ) {
             returnList.add(listByName.get(key));
         }
@@ -37,6 +49,10 @@ public class GroceryList {
 
     public ArrayList<Grocery> getListByTime() {
         returnList.clear();
+        listByTime.clear();
+        for (Grocery gro: groceries) {
+            listByTime.put(gro.getTime(), gro);
+        }
         for(LocalDateTime key : listByTime.keySet() ) {
             returnList.add(listByTime.get(key));
         }

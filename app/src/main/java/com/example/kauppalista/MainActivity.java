@@ -24,18 +24,17 @@ public class MainActivity extends AppCompatActivity {
 
 
         list = GroceryList.getInstance(); // Create list or get created one
-        recyclerView.setAdapter(new GroceryListAdapter(getApplicationContext(), list.getListByName()));
-        PrintList();
+        recyclerView.setAdapter(new GroceryListAdapter(getApplicationContext(), list.getGroceries()));
 
 
     }
 
     public void OrderByTime (View view) {
-        recyclerView.setAdapter(new GroceryListAdapter(getApplicationContext(), list.getListByTime()));
+        recyclerView.setAdapter(new GroceryListAdapter(getApplicationContext(), list.getListByName()));
     }
 
     public void OrderByName (View view) {
-        recyclerView.setAdapter(new GroceryListAdapter(getApplicationContext(), list.getListByName()));
+        recyclerView.setAdapter(new GroceryListAdapter(getApplicationContext(), list.getListByTime()));
     }
 
     public void AddGrocery(View view) {
