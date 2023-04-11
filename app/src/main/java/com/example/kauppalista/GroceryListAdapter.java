@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class GroceryListAdapter extends RecyclerView.Adapter<GroceryViewHolder> {
 
     private Context context;
-    private ArrayList<Grocery> list = new ArrayList<>();
+    private ArrayList<Grocery> list;
 
 
     public GroceryListAdapter(Context context, ArrayList<Grocery> list) {
