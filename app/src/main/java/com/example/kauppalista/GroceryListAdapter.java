@@ -30,8 +30,11 @@ public class GroceryListAdapter extends RecyclerView.Adapter<GroceryViewHolder> 
     @Override // Add values to labels
     public void onBindViewHolder(@NonNull GroceryViewHolder holder, int position) {
 
+        if (list.get(position).getRem().length() == 0) {
+            holder.txtRemember.setText("");
+        } else holder.txtRemember.setText("Muista: " + list.get(position).getRem());
+
         holder.txtProduct.setText(list.get(position).getGrocery());
-        holder.txtRemember.setText("Muista: " + list.get(position).getRem());
         holder.tbEditGrocery.setText(list.get(position).getGrocery());
         holder.tbEditRem.setText(list.get(position).getRem());
 
