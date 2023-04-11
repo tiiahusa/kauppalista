@@ -31,7 +31,7 @@ public class GroceryListAdapter extends RecyclerView.Adapter<GroceryViewHolder> 
     public void onBindViewHolder(@NonNull GroceryViewHolder holder, int position) {
 
         holder.txtProduct.setText(list.get(position).getGrocery());
-        holder.txtRemember.setText("Muista: " + list.get(position).getId());
+        holder.txtRemember.setText("Muista: " + list.get(position).getRem());
         holder.tbEditGrocery.setText(list.get(position).getGrocery());
         holder.tbEditRem.setText(list.get(position).getRem());
 
@@ -48,6 +48,7 @@ public class GroceryListAdapter extends RecyclerView.Adapter<GroceryViewHolder> 
                 Grocery grocery = GroceryList.getInstance().getGroceryById(pos);
                 grocery.setGrocery(holder.tbEditGrocery.getText().toString());
                 grocery.setRem(holder.tbEditRem.getText().toString());
+                holder.tbEditGrocery.setVisibility(View.GONE);
                 holder.tbEditRem.setVisibility(View.GONE);
                 notifyDataSetChanged();
 

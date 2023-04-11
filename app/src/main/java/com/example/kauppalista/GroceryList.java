@@ -43,28 +43,26 @@ public class GroceryList {
         return groceries;
     }
 
-    public ArrayList<Grocery> getListByName() {
-        returnList.clear();
+    public void orderListByName() {
         listByName.clear();
         for (Grocery gro: groceries) {
             listByName.put(gro.getGrocery(), gro);
         }
+        groceries.clear();
         for(String key : listByName.keySet() ) {
-            returnList.add(listByName.get(key));
+            groceries.add(listByName.get(key));
         }
-        return returnList;
     }
 
-    public ArrayList<Grocery> getListByTime() {
-        returnList.clear();
+    public void orderListByTime() {
         listByTime.clear();
         for (Grocery gro: groceries) {
             listByTime.put(gro.getTime(), gro);
         }
+        groceries.clear();
         for(LocalDateTime key : listByTime.keySet() ) {
-            returnList.add(listByTime.get(key));
+            groceries.add(listByTime.get(key));
         }
-        return returnList;
 
     }
 

@@ -18,7 +18,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="230dp"
             android:layout_height="100dp"
             android:orientation="vertical">
 
@@ -32,7 +32,7 @@
 
             <TextView
                 android:id="@+id/txtRemember"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
                 android:text="Muistutus"
@@ -60,13 +60,13 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="100dp"
+            android:layout_width="110dp"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
             <EditText
                 android:id="@+id/tbEditGrocery"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
@@ -75,7 +75,7 @@
 
             <EditText
                 android:id="@+id/tbEditRem"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"

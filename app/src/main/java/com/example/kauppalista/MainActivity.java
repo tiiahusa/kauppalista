@@ -31,11 +31,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void OrderByTime (View view) {
-        recyclerView.setAdapter(new GroceryListAdapter(getApplicationContext(), list.getListByTime()));
+        list.orderListByTime();
+        recyclerView.setAdapter(new GroceryListAdapter(getApplicationContext(), list.getGroceries()));
     }
 
     public void OrderByName (View view) {
-        recyclerView.setAdapter(new GroceryListAdapter(getApplicationContext(), list.getListByName()));
+        list.orderListByName();
+        recyclerView.setAdapter(new GroceryListAdapter(getApplicationContext(), list.getGroceries()));
     }
 
     public void AddGrocery(View view) {
