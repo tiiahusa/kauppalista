@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void AddGrocery(View view) {
 
-        Intent intent = new Intent(this, AddGrocery.class);
+        Intent intent = new Intent(this, TabActivity.class);
         startActivity(intent);
 
     }

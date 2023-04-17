@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.FragmentA">
+
+    <EditText
+        android:id="@+id/tbFRGroceryName"
+        android:layout_width="208dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:hint="Ostoksen nimi"
+        android:inputType="text"
+        android:layout_gravity="center_horizontal|top"/>
+
+    <EditText
+        android:id="@+id/tbFRRemText"
+        android:layout_width="221dp"
+        android:layout_height="136dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Muista..."
+        android:inputType="text"
+        android:singleLine="false"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginBottom="50dp"/>
+
+    <Button
+        android:id="@+id/btnFRGrocery"
+        android:layout_width="158dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="32dp"
+        android:onClick="Add"
+        android:text="Lisää ostos listaan"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="100dp"/>
+
+</FrameLayout>
