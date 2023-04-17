@@ -71,6 +71,7 @@
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:text="Name"
+                android:layout_marginRight="10dp"
                 android:visibility="invisible" />
 
             <EditText
@@ -80,6 +81,7 @@
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:text="Name"
+                android:layout_marginRight="10dp"
                 android:visibility="invisible" />
         </LinearLayout>
 
